@@ -1,7 +1,7 @@
 # Brilliant - Exposing Misconceptions from Perplexing Probabilities
 # Set up
 # Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag.
-# if the coin is tails, a blue marble is put into the bag. You pick out a marble at random. It's red. You place it back
+# If the coin is tails, a blue marble is put into the bag. You pick out a marble at random. It's red. You place it back
 # into the bag. What is the chance that next time you pull out a blue marble?
 
 # The answer is 0.25. The purpose of this function is prove this result by simulating this game a large number of times
@@ -14,11 +14,11 @@ def calc_probability(number_of_games):
 	final_marble = []
 	blue = ['Blue', 'Blue']
 
-	# Simulate the number of tries
+	# Simulate the number of games
 	for game in range(0, number_of_games): 
 
 		bag = []
-		# Simulate the coin flip and combination of marbels placed into the bag
+		# Simulate the coin flip and combination of marbles placed into the bag
 		for marbles in range(0,2):
 
 			flip = random.randint(0,1)
@@ -52,5 +52,15 @@ def calc_probability(number_of_games):
 		else:
 			pass
 
+	final_probability = round(1-final_marble.count("Red") / len(final_marble),3)		
+
 	# Calculating the probability of the marbel being blue
-	print("Odds of Blue: " +str(1 - final_marble.count("Red") / len(final_marble)))
+	print("After simulating " + str(number_of_games) + " games, the blue marble was pulled out with probability of " + str(final_probability))
+
+print("""Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You pick out a marble at random. It's red. You place it back into the bag. What is the chance that next time you pull out a blue marble?""")
+
+print("How many games would you like to simulate?")
+
+number_of_games = int(input(""))
+
+calc_probability(number_of_games)
