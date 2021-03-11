@@ -53,7 +53,7 @@ def calc_probability(number_of_games):
 			else:
 				Red += 1
 
-	final_probability = round(Blue/(Blue+Red),2)			
+	final_probability = round(Blue/(Blue+Red),3)			
 
 	#Calculate the probability of the remaining marble being Blue			
 	print('After simulating ' + str(number_of_games) + ' games, the probability of the remaining marble being blue is: ' + str(final_probability))
