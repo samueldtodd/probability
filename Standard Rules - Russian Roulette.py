@@ -1,5 +1,7 @@
 #Perplexing Probability - Russian Roulette
+
 #Setup
+
 #In standard Russian Roulette there are 6 players and 1 revolver. The revolver has a
 #cylinder with 6 chambers. Initially, all 6 chambers are empty. The game starts when 
 #one of the players inserts a bullet into one of the chambers and then spins the 
