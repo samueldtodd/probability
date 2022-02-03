@@ -10,8 +10,7 @@
 #the firing position. The player passes the revolver to the next player and the 
 #process is repeated until everyone has had a turn. If there is only 1 
 #bullet in the gun, then the game effectively ends when a person is shot.
-#
-#Are your chances of winning Russian Roulette (by surviving) better if you’re the 
+#Are your chances of winning Russian Roulette (by surviving) better if you're the 
 #first player to shoot, the last player to shoot, or some player in the middle of 
 #the game?
 
