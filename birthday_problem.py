@@ -4,6 +4,7 @@ import statistics
 probability = []
 lengths = []
 
+
 for simulations in range(0, 100):
 	birthdays = []
 	for people in range(0,365):
