@@ -1,11 +1,9 @@
 import random
 import statistics
 
-probability = []
 lengths = []
 
-
-for simulations in range(0, 100):
+for simulations in range(0, 100000):
 	birthdays = []
 	for people in range(0,365):
 		birthday = random.randint(0,365)
@@ -16,5 +14,4 @@ for simulations in range(0, 100):
 			lengths.append(len(birthdays))
 			break
 
-print(lengths)		
-
+print(statistics.median(lengths))
