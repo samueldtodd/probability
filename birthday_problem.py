@@ -18,4 +18,5 @@ for simulations in range(0, simulation_amount):
 			lengths.append(len(birthdays))
 			break
 
+
 print("After", simulation_amount, "simulations, an average of", (statistics.median(lengths)), "people entered the room before two shared a birthday.")
