@@ -10,6 +10,5 @@ for roll in range(0, 100000):
 	else:
 		results.append('Win')
 
-
 print(results.count('Win') / (results.count('Lose') + results.count('Win')))
 
