@@ -55,21 +55,21 @@ def run_sims(simulations):
         else:
             win += 1
             
-    result = win / (win+lose)
+    result = round(win / (win+lose),4)
     return result
 
 #Show results
 def results(result):
     if result >= 0.5 and has_bet == 'y':
         print(f'''You beat the odds! After {simulations} games you won {result} of games. 
-The odds of winning each game were 0.44. Try running a greater number of simulations and see if your luck continues.''')
+The odds of winning each game were 0.444. Try running a greater number of simulations and see if your luck continues.\n''')
     elif result >= 0.5 and has_bet == 'n':
         print(f'''You beat the odds and but did not bet! However, you were correct not to take it. After {simulations} games you won {result} of games.
-The odds of winning each game were 0.44. Try running a greater number of simulations and see if your luck continues.''')
+The odds of winning each game were 0.444. Try running a greater number of simulations and see if your luck continues.\n''')
     elif result <= 0.5 and has_bet == 'n':
-        print(f'You were right not to take the bet! After {simulations} games, you won {result} of games. The odds were less than 0.5 and therefore not in your favour.')
+        print(f'You were right not to take the bet! After {simulations} games, you won {result} of games. The odds were less than 0.5 and therefore not in your favour. The actual odds of winning are 0.444.\n')
     elif result <0.5 and has_bet == 'y':
-        print(f'You should not have taken the bet! After {simulations} games, you won {result} of games. The odds were less than 0.5 and therefore not in your favour.')
+        print(f'You should not have taken the bet! After {simulations} games, you won {result} of games. The odds were less than 0.5 and therefore not in your favour. The actual odds of winning are 0.444\n')
 
 #Give an explanation if the user requests it
 def give_explanation():
@@ -81,7 +81,7 @@ def give_explanation():
 In the event of outcomes 1-3 occurring, you lose. You only win if outcome 4 occurs, therefore the odds of winning
 are the same as the odds of outcome 4 occurring. As the dice rolls are independent (the outcome of one does not
 impact the other), the total odds are found by multiplying together the odds that each individual die shows 1, 2, 3, 4.
-The odds of rolling 1, 2, 3, 4 on a 6-sided die are 4/6. Therefore the final odds are (4/6) * (4/6): 0.444''')
+The odds of rolling 1, 2, 3, 4 on a 6-sided die are 4/6. Therefore the final odds are (4/6) * (4/6): 0.444\n''')
     
 
 #Ask if the player would take the bet
@@ -101,12 +101,11 @@ than 50%.\n''')
 #Check with the player wants to play again
 def play_again():
     
-    again = input("Would you like to run the simulation again? (y/n) ")
-    print('\n')
+    again = input('Would you like to run the simulation again? (y/n) ')
+    
     while (again.lower() != 'y') and (again.lower() != 'n'):
         
         again = input('Would you like to run the simulation again? (y/n) ')
-        print('\n')
         
     return again
 
@@ -144,4 +143,3 @@ while play == True:
         continue
     elif again == 'n':
         play = False
-        
