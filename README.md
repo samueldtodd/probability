@@ -1,5 +1,5 @@
 # Probability
-Probability puzzles and challenges simulated using Python. All code can be run in the terminal.
+Probability puzzles and challenges simulated using Python with varying levels of user-interactivity.
 
 ## [Dice Roll](dice_roll.py)
 
