@@ -10,3 +10,5 @@ You're offered the following bet: two dice will be rolled simultaneously, if nei
 Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You pick out a marble at random. It's red. You place it back into the bag. What is the chance that next time you pull out a blue marble?
 
 ## [Two Marbles Two Coins](two_marbles_two_coins.py)
+
+A more complicated version of the above Two Marbles problem. Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red. A red marble is set aside. What are the odds the remaining marble is blue?
