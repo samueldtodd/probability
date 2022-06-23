@@ -7,7 +7,7 @@ You're offered the following bet: two dice will be rolled simultaneously, if nei
 
 ## [Two Marbles Part One](two_marbles_part_one.py)
 
-Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is placed into the bag. If the coin is tails, a blue marble is put into the bag. You can't observe the coin flip or the marbles. You pick out a marble at random. It's red. You place it back into the bag. What is the chance that next time you pull out a blue marble?
+Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is placed into the bag. If the coin is tails, a blue marble is put into the bag. You can't observe the coin flip or the marbles. You pick out a marble at random from the bag. It's red. You place it back into the bag. What is the chance that you pull out a blue marble next time?
 
 ## [Two Marbles Part Two](two_marbles_part_two.py)
 
