@@ -1,7 +1,7 @@
 # Brilliant - Exposing Misconceptions from Perplexing Probabilities
 # Set up
 # Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag.
-# If the coin is tails, a blue marble is put into the bag. You look into the bag see at least one of the marbles is red.
+# If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red.
 # A red marble is set aside. What are the odds the remaining marble is blue?
 
 # The answer is 0.66. The purpose of this function is to prove this result by simulating this game a user-specified number
@@ -58,7 +58,7 @@ def calc_probability(number_of_games):
 	#Calculate the probability of the remaining marble being Blue			
 	print('After simulating ' + str(number_of_games) + ' games, the probability of the remaining marble being blue is: ' + str(final_probability))
 
-print("""Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You look into the bag see at least one of the marbles is red. A red marble is set aside. What are the odds the remaining marble is blue?""")
+print("""Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red. A red marble is set aside. What are the odds the remaining marble is blue?""")
 
 print("How many games would you like simulate?")
 
