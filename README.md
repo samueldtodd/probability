@@ -13,4 +13,4 @@ This problem is taken from the Perplexing Probability section on brilliant.org. 
 
 A follow up to the above Two Marbles problem. Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red. A red marble is set aside. What are the odds the remaining marble is blue?  This Python script simulates this scenario a number of times as input by the user. First the problem is presented, then the desired number of simulations is input, then the scenario is simulated using for loops and the random module. The percentage of scenarios in which the remaining marble is blue is calculated and printed to the user. To ensure user-input is of an appropriate type a function comprised of a while loop and try/exception is called.
 
-## [Weighted Coins](weight_coins.py)
+## [Weighted Coins](weighted_coins.py)
