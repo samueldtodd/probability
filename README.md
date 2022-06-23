@@ -1,14 +1,14 @@
 # Probability
-Probability puzzles and challenges simulated using Python. All code can be run in the terminal.
+Probability puzzles and challenges simulated using Python with varying levels of user-interactivity.
 
 ## [Dice Roll](dice_roll.py)
 
 You're offered the following bet: two dice will be rolled simultaneously, if neither die show a 5 or 6 you win. If either die shows 5 or 6, you lose. Should you take the bet? This Python script uses object-orientated programming to produce a die class which includes a method to simulate the rolling of dice. The user is first asked whether they take the bet and then asked to enter the number of simulations they wish to run. The game is then run for the desired number of simulations and the proportion of games in which the user won is returned. Different messages are printed based on whether or not the user took the bet. The user then has the option to view an explanation how the probability of winning can be calculated. While loops and try/exception are utilised to ensure user input is appropriate.
 
-## [Two Marbles](two_marbles.py)
+## [Two Marbles Part One](two_marbles_part_one.py)
 
-Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is placed into the bag. If the coin is tails, a blue marble is put into the bag. You can't observe the coin flip or the marbles. You pick out a marble at random. It's red. You place it back into the bag. What is the chance that next time you pull out a blue marble?
+This problem is taken from the Perplexing Probability section on brilliant.org. Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is placed into the bag. If the coin is tails, a blue marble is placed into the bag. You can't observe the coin flip or the marbles. You pick out a marble at random from the bag. It's red. You place it back into the bag. You remove a marble again, what is the chance that this time the marble is blue? This Python script simulates this scenario a number of times as input by the user. First the problem is presented, then the desired number of simulations is input, then the scenario is simulated using for loops and the random module. The percentage of scenarios in which a blue marble is removed is calculated and printed for the user. To ensure user-input is of an appropriate type a function comprised of a while loop and try/exception is called.
 
-## [Two Marbles Two Coins](two_marbles_two_coins.py)
+## [Two Marbles Part Two](two_marbles_part_two.py)
 
-A more complicated version of the above Two Marbles problem. Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red. A red marble is set aside. What are the odds the remaining marble is blue?
+A follow up to the above Two Marbles problem. Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red. A red marble is set aside. What are the odds the remaining marble is blue? Using for loops and the random module, this Python script simulates this scenario a number of times as input by the user and returns the final probability.
