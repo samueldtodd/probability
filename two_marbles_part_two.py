@@ -2,21 +2,39 @@
 # Set up
 # Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag.
 # If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red.
-# A red marble is set aside. What are the odds the remaining marble is blue?
+# A red marble is set aside. What is the probability the remaining marble is blue?
 
 # The answer is 0.66. The purpose of this function is to prove this result by simulating this game a user-specified number
 # of times and printing the result
 
-def calc_probability(number_of_games):
+import random
 
-	import random
+def check_input(input_value):
+	while input_value != int:    
+		try:
+			input_value = int(input_value)
+		except ValueError:
+			input_value = input('An integer must be entered. Try again: ')
+			input_value = check_input(input_value)
+        
+		try:
+			if input_value <= 0:
+				input_value = input('Value must be greater than 0. Try again: ')
+				input_value = check_input(input_value)
+
+		except:
+			input_value = check_input(input_value)
+            
+		return input_value
+
+def calc_probability(simulations):
 
 	per_game = []
 	remaining_marble = []
 	both_blue = ['Blue', 'Blue']
 
 	#Simulate the number of games
-	for game in range(0, number_of_games):
+	for game in range(0, simulations):
 
 		bag = []
 		# Simulate the coin flip and combination of marbles placed into the bag
@@ -56,12 +74,11 @@ def calc_probability(number_of_games):
 	final_probability = round(Blue/(Blue+Red),3)			
 
 	#Calculate the probability of the remaining marble being Blue			
-	print('After simulating ' + str(number_of_games) + ' games, the probability of the remaining marble being blue is: ' + str(final_probability))
+	print('After simulating ' + str(simulations) + ' games, the probability of the remaining marble being blue is: ' + str(final_probability))
 
 print("""Two marbles are placed into a bag determined by a coin flip. If the coin is heads, a red marble is put into the bag. If the coin is tails, a blue marble is put into the bag. You look into the bag and see at least one of the marbles is red. A red marble is set aside. What are the odds the remaining marble is blue?""")
 
-print("How many games would you like simulate?")
+simulations = input("How many games would you like to simulate? ")
+simulations = check_input(simulations)
 
-number_of_games = int(input(""))
-
-calc_probability(number_of_games)
+calc_probability(simulations)
