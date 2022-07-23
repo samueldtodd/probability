@@ -6,8 +6,10 @@
 
 #The answer is yes, the game is fair. Over a large number of games, both players have an equal change of winning
 
+import random
+
 def check_input(input_value):
-	while input_value != int:    
+	while input_value != int:
 		try:
 			input_value = int(input_value)
 		except ValueError:
@@ -26,48 +28,38 @@ def check_input(input_value):
 
 def test_fairness(simulations):
 
-	ending_outcomes = []
-	player_1_win_condition = ['H', 'T']
-
-	import random
+	player_1_wins = 0
+	player_2_wins = 0
 
 	for game in range(0,simulations):
 		
-		game_result = ['H', 'H']
+		play = True
 
-		while game_result == ['H', 'H'] or game_result == ['T', 'T']:
+		while play == True:
 
 			coin_1 = random.randint(0,100)
 			coin_2 = random.randint(0,100)
 
 			if coin_1 > 0 and coin_2 > 0:
-				game_result = ['H', 'H']
-			
-			elif coin_1 == 0 and coin_2 > 0:
-				game_result = ['T', 'H']
+				pass
 			
 			elif coin_1 > 0 and coin_2 == 0:
-				game_result = ['H', 'T']
+				player_1_wins += 1
+				play = False
+			
+			elif coin_1 == 0 and coin_2 > 0:
+				player_2_wins += 1
+				play = False
 			
 			else:
-				game_result = ['T', 'T']
+				pass
 
-		ending_outcomes.append(game_result)
+	print('After ' + str(simulations) + ' simulations, Player 1 won with a probability of ' + str(round(player_1_wins/(player_1_wins + player_2_wins),4)) + ' and Player 2 won with a probability of ' + str(round(1-(player_1_wins/(player_1_wins + player_2_wins)),4)) + ". The more simulations that are run, the closer each player's probability of winning approaches 0.5, therefore the game is fair.")
 
-	player_1_wins = 0
-	player_2_wins = 0
-
-	for outcome in ending_outcomes:
-		if outcome == player_1_win_condition:
-			player_1_wins += 1
-		else:
-			player_2_wins += 1
-
-	print('After ' + str(simulations) + ' simulations, Player 1 won with a probability of ' + str(player_1_wins/(player_1_wins + player_2_wins)) + ' and Player 2 won with a probability of ' + str(1-(player_1_wins/(player_1_wins + player_2_wins))) + ". The more simulations that are run, the closer each player's probability of winning approaches 0.5, therefore the game is fair.")
-
-print("Two people are playing a game. They each take turns to flip their own coin. If the flips match, they flip again. The game ends when the two flips don't match, in which case the player with heads is the winner. If this game is played with weighted coins that land on heads 99% of time and tails 1% of the time, is the game fair?")
+print("Two people are playing a game. They each take turns to flip their own coin. If the flips match, they flip again. The game ends when the two flips don't match, in which case the player with heads is the winner. If this game is played with weighted coins that land on heads 99% of time and tails 1% of the time, is the game fair?\n")
 
 simulations = input("How many games would you like to simulate? ")
+print('\n')
 simulations = check_input(simulations)
 
 test_fairness(simulations)
