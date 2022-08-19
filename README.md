@@ -1,5 +1,5 @@
 # Probability
-Probability puzzles and challenges simulated using Python with varying levels of user-interactivity.
+Probability puzzles and challenges simulated using Python with varying levels of user input required.
 
 ## [Dice Roll](dice_roll.py)
 
