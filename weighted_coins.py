@@ -54,12 +54,29 @@ def test_fairness(simulations):
 			else:
 				pass
 
-	print('After ' + str(simulations) + ' simulations, Player 1 won with a probability of ' + str(round(player_1_wins/(player_1_wins + player_2_wins),4)) + ' and Player 2 won with a probability of ' + str(round(1-(player_1_wins/(player_1_wins + player_2_wins)),4)) + ". The more simulations that are run, the closer each player's probability of winning approaches 0.5, therefore the game is fair.")
+	print('After ' + str(simulations) + ' games, Player 1 won with a probability of ' + str(round(player_1_wins/(player_1_wins + player_2_wins),4)) + ' and Player 2 won with a probability of ' + str(round(1-(player_1_wins/(player_1_wins + player_2_wins)),4)) + ". The more simulations that are run, the closer each player's probability of winning approaches 0.5, therefore the game is fair.")
 
-print("Two people are playing a game. They each take turns to flip their own coin. If the flips match, they flip again. The game ends when the two flips don't match, in which case the player with heads is the winner. If this game is played with weighted coins that land on heads 99% of time and tails 1% of the time, is the game fair?\n")
 
-simulations = input("How many games would you like to simulate? ")
-print('\n')
-simulations = check_input(simulations)
+play = True
 
-test_fairness(simulations)
+while play == True:
+
+	print("Two people are playing a game. They each take turns to flip their own coin. If the flips match, they flip again. The game ends when the two flips don't match, in which case the player with heads is the winner. If this game is played with weighted coins that land on heads 99% of time and tails 1% of the time, is the game fair?\n")
+	simulations = input("How many games would you like to simulate? ")
+	print('\n')
+	simulations = check_input(simulations)
+
+	test_fairness(simulations)
+	print('\n')
+	
+	again = input('Would you like to play again? (y/n): ')
+
+	while (again != 'y') & (again != 'n'):
+		again = input('Would you like to play again? (y/n): ')
+
+	if again == 'y':
+		print('\n')
+		pass
+	else:
+		play = False
+
