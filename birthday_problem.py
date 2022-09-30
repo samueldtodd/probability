@@ -28,6 +28,6 @@ def birthday_simulation(simulation_amount):
 
 print('''You are alone in a room. One by one a new person will enter and share their birthday with the group. On average, how many people need to enter the room before there is a greater than 50/50 chance that two share a birthday? This code simulates this event a set number of times and returns the median number of people who entered the room before two shared a birthday.''')
 
-birthday_simulation(100000)
+birthday_simulation(1000)
 
 
